@@ -1,4 +1,4 @@
-package mdetect
+package Go
 
 /* *******************************************
 // Copyright 2010-2015, Anthony Hand
@@ -295,7 +295,7 @@ func (base *UAgentInfo) DetectIphone() int {
 	}
 
 	if strings.Index(base.userAgentHeader, deviceIphone) > -1 {
-		//The iPad and iPod Touch say they're an iPhone. So let's disambiguate. 
+		//The iPad and iPod Touch say they're an iPhone. So let's disambiguate.
 		if base.DetectIpad() == true || base.DetectIpod() == true {
 			return false
 		} else {
@@ -448,7 +448,7 @@ func (base *UAgentInfo) DetectWebkit() int {
 }
 
 //**************************
-// Detects if the current browser is a 
+// Detects if the current browser is a
 // Windows Phone 7, 8, or 10 device.
 func (base *UAgentInfo) DetectWindowsPhone() int {
 	if (base.DetectWindowsPhone7() == true) || (base.DetectWindowsPhone8() == true) || (base.DetectWindowsPhone10() == true) {
@@ -602,7 +602,7 @@ func (base *UAgentInfo) DetectBlackBerryHigh() int {
 
 //**************************
 // Detects if the current browser is a BlackBerry device AND
-//    has an older, less capable browser. 
+//    has an older, less capable browser.
 //    Examples: Pearl, 8800, Curve1.
 func (base *UAgentInfo) DetectBlackBerryLow() int {
 	if base.DetectBlackBerry() == true {
@@ -636,7 +636,7 @@ func (base *UAgentInfo) DetectS60OssBrowser() int {
 
 //**************************
 // Detects if the current device is any Symbian OS-based device,
-//   including older S60, Series 70, Series 80, Series 90, and UIQ, 
+//   including older S60, Series 70, Series 80, Series 90, and UIQ,
 //   or other browsers running on these devices.
 func (base *UAgentInfo) DetectSymbianOS() int {
 	if strings.Index(base.userAgentHeader, deviceSymbian) > -1 || strings.Index(base.userAgentHeader, deviceS60) > -1 ||
@@ -710,7 +710,7 @@ func (base *UAgentInfo) DetectOperaMobile() int {
 
 //**************************
 // Detects if the current device is an Amazon Kindle (eInk devices only).
-// Note: For the Kindle Fire, use the normal Android methods. 
+// Note: For the Kindle Fire, use the normal Android methods.
 func (base *UAgentInfo) DetectKindle() int {
 	if strings.Index(base.userAgentHeader, deviceKindle) > -1 &&
 		base.DetectAndroid() == false {
@@ -1155,7 +1155,7 @@ func (base *UAgentInfo) DetectTierIphone() int {
 //**************************
 // The quick way to detect for a tier of devices.
 //   This method detects for devices which are likely to be capable
-//   of viewing CSS content optimized for the iPhone, 
+//   of viewing CSS content optimized for the iPhone,
 //   but may not necessarily support JavaScript.
 //   Excludes all iPhone Tier devices.
 func (base *UAgentInfo) DetectTierRichCss() int {
