@@ -13,7 +13,7 @@ import (
 )
 
 func yourHandler(w http.ResponseWriter, r *http.Request) {
-	detect := mdetect.NewMDetect(r)
+	detect := mobileesp.NewMDetect(r)
 	if detect.IsAndroidPhone == 0 {
 		log.Printf("i'm an android phone")
 		return
