@@ -7,7 +7,7 @@ example check if request from an android phone
 package main
 
 import (
-	mdetect "github.com/fari-99/mobileesp/Go"
+	mdetect "github.com/fari-99/mobileesp/Go/mobileesp"
 	"log"
 	"net/http"
 )
